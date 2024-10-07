@@ -40,15 +40,18 @@ $(document).ready(function () {
     });
 
     // Handle button clicks
-    $(".btn").on("click touchstart", function () {
-        if (started) {
-            var userChosenColour = $(this).attr("id");
-            userClickedPattern.push(userChosenColour);
-            playSound(userChosenColour);
-            animatePress(userChosenColour);
-            checkAnswer(userClickedPattern.length - 1);
-        }
-    });
+// Handle button clicks
+$(".btn").on("click touchstart", function (event) {
+    event.preventDefault(); // Prevent any default behavior for touch events
+    if (started) {
+        var userChosenColour = $(this).attr("id");
+        userClickedPattern.push(userChosenColour);
+        playSound(userChosenColour);
+        animatePress(userChosenColour);
+        checkAnswer(userClickedPattern.length - 1);
+    }
+});
+
 
     // Handle keydown events
     $(document).keydown(function (event) {
