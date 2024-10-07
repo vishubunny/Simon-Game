@@ -1,0 +1,239 @@
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #111;
+  color: white;
+  text-align: center;
+  background-image: url('Backgroundpage1.png'); /* Adventure map background */
+  background-size: cover;
+  background-attachment: fixed; /* Keep the background fixed while scrolling */
+}
+
+.background {
+  padding: 20px;
+}
+
+#player-form {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack input and button vertically */
+}
+
+#player-name {
+  padding: 10px;
+  font-size: 1rem;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 2px solid #fff; /* Keep the border white */
+  background-color: #fff; /* Set background to white */
+  color: black; /* Set text color to black for better contrast */
+}
+
+#name-submit {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #FFCC00; /* Bright yellow */
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#name-submit:hover {
+  background-color: #FFD700; /* Lighter yellow on hover */
+  transform: scale(1.05);
+}
+
+#high-scores {
+  margin-top: 20px;
+  color: #FFF;
+  display: none; /* Hidden until needed */
+  background-image: url('Backgroundpage1.png'); /* High scores background */
+  background-size: contain; /* Cover the entire area */
+  padding: 20px; /* Add some padding for better layout */
+  border-radius: 10px; /* Rounded corners */
+}
+
+#score-list {
+  list-style: none;
+  padding: 0;
+}
+
+#level-title {
+  font-size: 2.5rem;
+  margin: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Text shadow for visibility */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+#simon-button {
+  background-color: #FFCC00; /* Bright yellow */
+}
+
+#start-button {
+  background-color: #FF3366; /* Bright pink */
+}
+
+.container {
+  display: block;
+  width: 80%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  width: 120px; /* Make it larger on mobile */
+  height: 120px;
+  margin: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.8;
+  transition: opacity 0.2s, transform 0.2s, background-color 0.3s; /* Added transform transition */
+  border: 2px solid #111; /* Add border to the color buttons */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add a slight shadow for depth */
+}
+
+.btn:hover {
+  opacity: 1;
+  transform: scale(1.1); /* Scale up slightly on hover */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Glow effect */
+}
+
+.active {
+  opacity: 1; /* Fully visible */
+  transform: scale(1.1); /* Slightly enlarge */
+  box-shadow: 0 0 30px rgba(255, 255, 0, 1), 0 0 50px rgba(255, 255, 0, 1); /* Brighter yellow glow */
+}
+
+.green.active {
+  background-color: #A5D6A7; /* Brighter green */
+}
+
+.red.active {
+  background-color: #EF9A9A; /* Brighter red */
+}
+
+.yellow.active {
+  background-color: #FFFF00; /* Bright yellow */
+}
+
+.blue.active {
+  background-color: #90CAF9; /* Brighter blue */
+}
+
+.green {
+  background-color: #4CAF50;
+}
+
+.green.pressed {
+  background-color: #81C784; /* Brighter green when pressed */
+}
+
+.red {
+  background-color: #F44336;
+}
+
+.red.pressed {
+  background-color: #EF5350; /* Brighter red when pressed */
+}
+
+.yellow {
+  background-color: #FFEB3B;
+}
+
+.yellow.pressed {
+  background-color: #FFEA00; /* Brighter yellow when pressed */
+}
+
+.blue {
+  background-color: #2196F3;
+}
+
+.blue.pressed {
+  background-color: #64B5F6; /* Brighter blue when pressed */
+}
+
+.pressed {
+  opacity: 1; /* Fully visible */
+  transform: scale(1.1); /* Slightly enlarge when pressed */
+  box-shadow: 0 0 25px rgba(255, 255, 255, 1); /* Bright glow effect */
+}
+
+.scroll-text {
+  background: rgba(255, 255, 255, 0.1); /* Retained existing transparency */
+  color: #fff;
+  padding: 20px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  margin: 20px auto;
+  width: 80%;
+  background-image: url('Mapscroll2.jpg'); /* Instructions background */
+  background-size: cover; /* Make sure it covers the area */
+  background-position: center; /* Center the image */
+}
+
+.scroll-text h2 {
+  color: #FFCC00; /* Bright color for headings */
+  text-align: center;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #FFF;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  #player-name {
+    width: 80%; /* Make input full width on small screens */
+  }
+
+  #player-form {
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  .btn {
+    width: 150px; /* Increase size on smaller screens */
+    height: 150px;
+  }
+
+  #level-title {
+    font-size: 2rem; /* Smaller font size for title */
+  }
+
+  #score-list {
+    font-size: 1rem; /* Adjust font size of score list */
+  }
+
+  footer {
+    padding: 15px; /* Reduce footer padding */
+  }
+}

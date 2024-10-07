@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishal's Simon Game</title>
+    <link rel="icon" href="icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background">
+        <h1 id="level-title">Welcome to the Simon Game!</h1>
+        <h2 id="instructions-text">Press the "Instructions" Button to Learn the Rules</h2>
+
+        <div id="player-form" style="display: none; text-align: center;">
+            <input type="text" id="player-name" placeholder="Enter your name" />
+            <button id="name-submit">Submit</button>
+        </div>
+
+        <button id="simon-button">Instructions</button>
+        <button id="start-button" style="display: none;">Start Game</button>
+        <button id="restart-button" style="display: none;">Restart Game</button>
+
+        <div id="rules" style="display: none;" class="scroll-text">
+            <h2>Game Rules:</h2>
+            <p>
+                Match the flashing colors in the right order and see how far your memory can take you!
+                <br><br>
+                1. Click the colored buttons or use the keyboard keys to play:
+                <br>
+                &nbsp;&nbsp; - <strong>W</strong> for Green
+                <br>
+                &nbsp;&nbsp; - <strong>A</strong> for Yellow
+                <br>
+                &nbsp;&nbsp; - <strong>S</strong> for Blue
+                <br>
+                &nbsp;&nbsp; - <strong>D</strong> for Red
+                <br><br>
+                2. If you get it wrong, you'll have to start over!
+                <br><br>
+                Ready? Let’s see how well you can remember!
+            </p>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div type="button" id="green" class="btn green"></div>
+                <div type="button" id="red" class="btn red"></div>
+            </div>
+            <div class="row">
+                <div type="button" id="yellow" class="btn yellow"></div>
+                <div type="button" id="blue" class="btn blue"></div>
+            </div>
+        </div>
+
+        <div id="high-scores" style="display: none; text-align: center;">
+            <h2>High Scores:</h2>
+            <div class="scroll-text">
+                <ul id="score-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="game.js" charset="utf-8"></script>
+
+</body>
+
+<footer>
+    More of me...👇
+    <br>
+    <br>
+    <a href="mailto:vishalkumar1856@gmail.com">Mail</a>
+    <a href="https://www.linkedin.com/in/vishal-k-797911264/">LinkedIn</a>
+    <a href="https://github.com/vishubunny">Github</a>
+</footer>
+
+</html>
