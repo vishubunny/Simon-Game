@@ -96,6 +96,7 @@ function submitName() {
 }
 
 // Function to check player's answer
+// Existing checkAnswer function
 function checkAnswer(currentLevel) {
     console.log("User Pattern:", userClickedPattern);
     console.log("Game Pattern:", gamePattern);
@@ -104,12 +105,12 @@ function checkAnswer(currentLevel) {
         console.log("Correct!");
         if (userClickedPattern.length === gamePattern.length) {
             setTimeout(function () {
-                nextSequence();
+                nextSequence(); // Move to the next sequence if the answer is correct
             }, 1000);
         }
     } else {
         console.log("Wrong!");
-        playSound("Sarle"); // Make sure the sound file exists
+        playSound("Sarle"); // Play wrong sound
         $("body").addClass("game-over");
         setTimeout(function () {
             $("body").removeClass("game-over");
@@ -120,6 +121,7 @@ function checkAnswer(currentLevel) {
         started = false; // Game over, set started to false
     }
 }
+
 
 // Function to generate the next sequence
 function nextSequence() {
