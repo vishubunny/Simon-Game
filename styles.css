@@ -210,6 +210,7 @@ footer {
 /* Existing CSS rules... */
 
 /* Responsive adjustments */
+/* Responsive adjustments */
 @media (max-width: 600px) {
   #player-name {
     width: 80%; /* Make input full width on small screens */
@@ -220,7 +221,7 @@ footer {
   }
 
   .btn {
-    width: 150px; /* Increase size on smaller screens */
+    width: 150px; /* Increase button size for touch */
     height: 150px;
   }
 
@@ -228,11 +229,7 @@ footer {
     font-size: 2rem; /* Smaller font size for title */
   }
 
-  /* New CSS rules for additional responsiveness */
-  body {
-    font-size: 14px; /* Adjust font size for smaller screens */
-  }
-
+  /* Additional styles */
   #instructions-text {
     font-size: 1rem; /* Smaller instructions font size */
   }
@@ -250,4 +247,3 @@ footer {
     font-size: 12px; /* Smaller footer text */
   }
 }
-  
