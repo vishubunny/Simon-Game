@@ -99,9 +99,9 @@ button:hover {
 }
 
 .btn {
-  width: 120px;
-  height: 120px;
-  margin: 20px;
+  width: 150px; /* Make buttons larger for touch */
+  height: 150px; /* Increase height for touch targets */
+  margin: 20px; /* Keep some spacing */
   border-radius: 50%;
   display: inline-block;
   opacity: 0.8;
@@ -212,38 +212,21 @@ footer {
 /* Responsive adjustments */
 /* Responsive adjustments */
 @media (max-width: 600px) {
-  #player-name {
-    width: 80%; /* Make input full width on small screens */
-  }
-
-  #player-form {
-    flex-direction: column; /* Stack elements vertically */
-  }
-
-  .btn {
-    width: 150px; /* Increase button size for touch */
-    height: 150px;
-  }
-
   #level-title {
-    font-size: 2rem; /* Smaller font size for title */
+      font-size: 2rem; /* Make title font smaller for mobile */
   }
 
-  /* Additional styles */
-  #instructions-text {
-    font-size: 1rem; /* Smaller instructions font size */
+  #player-name {
+      width: 90%; /* Full width on mobile */
   }
 
   .scroll-text {
-    width: 90%; /* Increase width for smaller screens */
-    padding: 15px; /* Reduce padding for smaller screens */
-  }
-
-  #high-scores {
-    padding: 10px; /* Adjust padding */
+      padding: 10px; /* Adjust padding for mobile */
+      width: 90%; /* Make it fit better */
   }
 
   footer {
-    font-size: 12px; /* Smaller footer text */
+      font-size: 14px; /* Smaller footer text */
   }
 }
+
