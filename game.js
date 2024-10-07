@@ -39,10 +39,9 @@ $(document).ready(function () {
         $("#restart-button").fadeOut(500);
     });
 
-    // Handle button clicks
 // Handle button clicks
 $(".btn").on("click touchstart", function (event) {
-    event.preventDefault(); // Prevent any default behavior for touch events
+    event.preventDefault(); // Prevent default behavior for touch events
     if (started) {
         var userChosenColour = $(this).attr("id");
         userClickedPattern.push(userChosenColour);
@@ -51,6 +50,15 @@ $(".btn").on("click touchstart", function (event) {
         checkAnswer(userClickedPattern.length - 1);
     }
 });
+
+// Start the game on touch or click
+$("#start-button").on("click touchstart", function (event) {
+    event.preventDefault(); // Prevent default behavior for touch events
+    $("#start-button").fadeOut(500);
+    resetGame();
+    nextSequence();
+});
+
 
 
     // Handle keydown events
